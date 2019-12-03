@@ -1,5 +1,7 @@
-{% capture currentDate %}{{ site.time | date: '%F' }}{% endcapture %}
-{% capture futureDate %}{{ page.future_date | date: '%F' }}{% endcapture %}
-<br>currentDate: {{currentDate}}
-<br>futureDate: {{futureDate}}
-<br>FutureDate earlier than currentDate? {% futureDate - currentDate %}
+{% capture currentDate %}{{ site.time | date: '%s' }}{% endcapture %}
+{% capture futureDate %}{{ page.release_date | date: '%F' | date: '%s' }}{% endcapture %}
+{% assign diff = futureDate | minus: currentDate %}
+{% assign daydiff = diff |  divided_by: 60 | divided_by: 60 | divided_by: 24  %}
+Release datum:
+{{ page.release_date }}
+<br>Nog {{ daydiff }} dagen tot de release van de eerste podcast.
