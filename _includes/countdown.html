@@ -3,6 +3,6 @@
 {% assign diff = futureDate | minus: currentDate %}
 {% assign daydiff = diff |  divided_by: 60 | divided_by: 60 | divided_by: 24  %}
 Release datum:
-{{ page.release_date }}
-De podcast release is nog even uitgesteld en dus de datum een beetje opgeschoven.
-<br>Nog {{ daydiff }} dagen tot de release van de eerste podcast.
+<b> {{ page.release_date }} (Vrijdag 7 Augustus 2020)</b><br>
+Na verschillende maanden van uitstel, gelukkig toch geen afstel.<br>
+<b style="color:red; font-size:xx-large">{{ daydiff }} </b> dagen tot de release van de eerste podcast.
