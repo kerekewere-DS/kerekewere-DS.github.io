@@ -5,7 +5,7 @@ on:
     - cron:  '0 0 * * *'
 
 jobs:
-  jekyll:
+  github-pages:
     runs-on: ubuntu-16.04 # can change this to ubuntu-latest if you prefer
     steps:
       - name: 📂 setup
