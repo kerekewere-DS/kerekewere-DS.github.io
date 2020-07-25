@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: 📂 setup
         uses: actions/checkout@v2
+        with:
+          ref: sourcefiles
 
         # Not docker based so needs a ruby install.
       - name: 💎 setup ruby
