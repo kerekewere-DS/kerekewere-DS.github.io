@@ -1,8 +1,0 @@
-{% capture currentDate %}{{ site.time | date: '%s' }}{% endcapture %}
-{% capture futureDate %}{{ page.release_date | date: '%F' | date: '%s' }}{% endcapture %}
-{% assign diff = futureDate | minus: currentDate %}
-{% assign daydiff = diff |  divided_by: 60 | divided_by: 60 | divided_by: 24  %}
-Release datum:
-<b> {{ page.release_date }} (Vrijdag 7 Augustus 2020)</b><br>
-De publicatie is wat verlaat, maar nu kunnen we eindelijk aftellen naar de release. <br>
-<b style="color:red; font-size:xx-large">{{ daydiff }} </b> dagen tot de release van de eerste podcast.
