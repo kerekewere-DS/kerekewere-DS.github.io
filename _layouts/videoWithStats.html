@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="preload" as="image" href="{{ page.statsurl }}" crossorigin></link>
+		<title>{{ page.title }}</title>
+	</head>
+	<body>
+		<div class="video-container">
+			<video controls autoplay muted>
+					<source src="{{ page.assetURL }}" type="video/mp4" controls autoplay muted>
+			</video>
+			{{ content }}
+		</div>
+		<img src="{{ page.statsurl }}" style="display: none"></img>
+	</body>
+</html>
