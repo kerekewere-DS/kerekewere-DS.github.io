@@ -1,0 +1,31 @@
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="copyright" content="Everything on this site has a permisive copyleft license. Kopimi!">
+  <meta name="robots" content="index,follow">
+{% if page.img %}
+  <meta name="twitter:card" content="summary_large_image" />
+{% else %} 
+  <meta name="twitter:card" content="summary" />
+{% endif %}
+  <meta name="twitter:site" content="@KerekewereD">
+  <meta name="twitter:creator" content="@KerekewereD">
+  <meta name="medium" content="mult">
+
+{% if page.title%}
+  <title>{{ page.title }}</title>
+  <meta name="og:title" content="{{ page.title }}">
+{% endif %}
+{% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  <meta name="og:description" content="{{ page.description }}">
+{% endif %}
+{% if page.img %}
+  <meta name="twitter:image" content="{{ site.url }}{{ page.img }}?{{page.refreshnum}}">
+  <meta property="og:image" content="{{site.url}}{{ page.img }}?{{page.refreshnum}}">
+{% endif %}
+{% if page.date %}
+  <meta name="date" content="{{ page.date | date: "%Y-%m-%d" }}" scheme="YYYY-MM-DD">
+{% endif %}
+  <meta name="language" content="nl">
