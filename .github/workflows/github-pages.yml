@@ -13,6 +13,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: sourcefiles
+          token: ${{ secrets.JEKYLL_PAT }}
 
         # Not docker based so needs a ruby install.
       - name: 💎 setup ruby
