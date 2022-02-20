@@ -15,7 +15,7 @@ jobs:
           repository: kerekewere-DS/kerekewere-DS.github.io  # Potential fix.
           ref: sourcefiles
           path: kerekewere-DS.github.io
-          token: ${{ secrets.JEKYLL_PAT }} # Recently became required for checkout?
+          token: ${{ secrets.GITHUB_TOKEN }} # Recently became required for checkout?
 
         # Not docker based so needs a ruby install.
       - name: 💎 setup ruby
@@ -33,7 +33,7 @@ jobs:
       - name: 🚀 deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.JEKYLL_PAT }}
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Refactored token from JEKYLL_PAT.
           publish_dir: ./_site
           # if the repo you are deploying to is <username>.github.io, uncomment the line below.
           # if you are including the line below, make sure your source files are NOT in the master branch:
