@@ -14,6 +14,7 @@ jobs:
         with:
           repository: kerekewere-DS/kerekewere-DS.github.io  # Potential fix.
           ref: sourcefiles
+          path: kerekewere-DS.github.io
           token: ${{ secrets.JEKYLL_PAT }} # Recently became required for checkout?
 
         # Not docker based so needs a ruby install.
