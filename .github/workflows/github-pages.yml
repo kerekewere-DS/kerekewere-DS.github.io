@@ -12,8 +12,9 @@ jobs:
       - name: 📂 setup
         uses: actions/checkout@v2
         with:
+          repository: kerekewere-DS/kerekewere-DS.github.io  # Potential fix.
           ref: sourcefiles
-          token: ${{ secrets.JEKYLL_PAT }}
+          token: ${{ secrets.JEKYLL_PAT }} # Recently became required for checkout?
 
         # Not docker based so needs a ruby install.
       - name: 💎 setup ruby
